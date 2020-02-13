@@ -1,0 +1,240 @@
+/*********************************************************************************************************************/
+
+
+html, body, .wrapper {
+    height: 100%;
+    background-color: #eee;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+
+/* *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *   *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * */
+
+
+.wrapper .header {
+    height: 70px;
+    font-size: 14px;
+    line-height: 70px;
+    background-color: #354457;
+    color: #ffffff;
+}
+
+.wrapper .header img {
+    margin: 0 8px 0 16px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+.wrapper .container {
+    overflow: hidden;
+    min-height: calc(100% - 70px);
+}
+
+.wrapper .container .slider {
+    float: left;
+    width: 200px;
+    height: 1000px;
+    margin-bottom: -200px;
+    background-color: #4d5e70;
+}
+
+.container .slider dt,
+.container .slider dd {
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #b3bcc5;
+}
+
+.container .slider dt {
+    padding-left: 10px;
+}
+
+.container .slider dd {
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.container .slider dd:hover {
+    color: #354457;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.container .slider .active {
+    color: #354457;
+    background-color: #ddd;
+}
+
+
+/* *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *   *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * */
+
+
+.wrapper .container .content {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.content #student-add {
+    display: none;
+    width: 500px;
+    margin: 50px auto;
+}
+
+.content #student-add form label,
+.content #student-list form label {
+    display: inline-block;
+    margin-right: 8px;
+    width: 40px;
+    text-align: right;
+}
+
+.content #student-add form input,
+.content #student-list form input {
+    border: 1px solid #d8d8d8;
+}
+
+.content #student-add form > div,
+.content #student-list form > div {
+    margin-bottom: 12px;
+}
+
+.content #student-add form div > label.sex,
+.content #student-list form div > label.sex {
+    padding-left: 4px;
+    width: auto;
+}
+
+.content #student-add form > div:last-child,
+.content #student-list form > div:last-child {
+    margin: 0 0 0 48px;
+
+}
+
+.content #student-add form .btn,
+.content #student-list form .btn {
+    padding: 4px 8px;
+    margin-right: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *   *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * */
+
+
+.content #student-list {
+    /*display: none;*/
+}
+
+.content #student-list table {
+    width: 100%;
+}
+
+.content #student-list table thead {
+    background-color: #e3e8ee;
+}
+
+.content #student-list table tbody {
+    background-color: #fff;
+}
+
+.content #student-list table tr {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.content #student-list table .btn {
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content #student-list table .edit {
+    background-color: forestgreen;
+}
+
+.content #student-list table .delete {
+    background-color: crimson;
+}
+
+.content #student-list .turn-page {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.content #student-list .turn-page .btn {
+    /*display: none;*/
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 10px;
+
+}
+
+.content #student-list .turn-page .btn:first-child {
+    margin-right: 4px;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+.content #student-list .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.content #student-list h3 {
+    padding: 24px 0 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.modal .modal-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 360px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.content #student-list .modal button.btn {
+    margin-right: 0;
+    width: 127px;
+}
+
+.modal .modal-content form label:first-child {
+    margin-left: 66px;
+}
+
+.content #student-list form > div:last-child {
+    margin-left: 114px;
+}
+
+.content #student-list .modal:before {
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*********************************************************************************************************************/

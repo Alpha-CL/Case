@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -11,41 +11,126 @@
 
 <div class="wrapper">
     <div class="header">
-        <img src="" alt="" class="logo">
-        <p>Alpha</p>
+        <img src="img/logo.png" alt="logo" class="logo">
+        <span>Alpha</span>
     </div>
     <div class="container">
-        <div class="slider">
-            <dl class="menu">
-                <dt>学生管理</dt>
-                <dd>学生列表</dd>
-                <dd>新增学生</dd>
-            </dl>
-        </div>
+        <dl class="slider">
+            <dt>学生管理</dt>
+            <dd class="active" data-id="student-list">学生列表</dd>
+            <dd data-id="student-add">新增学生</dd>
+        </dl>
         <div class="content">
+            <div id="student-add" class="content-box" date-id="student-add">
+                <form>
+                    <div><label for="name">姓名</label><input type="text" id="name" name="name"></div>
+                    <div>
+                        <label>性别</label>
+                        <input type="radio" name="sex" value="0" id="male" checked>
+                        <label for="male" class="sex">男</label>
+                        <input type="radio" name="sex" value="1" id="female" checked>
+                        <label for="female" class="sex">女</label>
+                    </div>
+                    <div><label for="sNo">学号</label><input type="text" id="sNo" name="sNo"></div>
+                    <div><label for="email">邮箱</label><input type="text" id="email" name="email"></div>
+                    <div><label for="birth">出生年</label><input type="text" id="birth" name="birth"></div>
+                    <div><label for="phone">手机号</label><input type="text" id="phone" name="phone"></div>
+                    <div><label for="address">住址</label><input type="text" id="address" name="address"></div>
+                    <div>
+                        <button id="student-add-submit" class="btn">提交</button>
+                        <button id="student-add-reset" class="btn">重置</button>
+                    </div>
+                </form>
+            </div>
+            <div id="student-list" class="content-box">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>邮箱</th>
+                        <th>年龄</th>
+                        <th>手机号</th>
+                        <th>住址</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    <!--                    <tr>-->
+                    <!--                        <td>0001</td>-->
+                    <!--                        <td>小明</td>-->
+                    <!--                        <td>男</td>-->
+                    <!--                        <td>test@qq.com</td>-->
+                    <!--                        <td>18</td>-->
+                    <!--                        <td>12356723471</td>-->
+                    <!--                        <td>美国</td>-->
+                    <!--                        <td>-->
+                    <!--                            <button class="btn edit">编辑</button>-->
+                    <!--                            <button class="btn delete">删除</button>-->
+                    <!--                        </td>-->
+                    <!--                    </tr>-->
+                    </tbody>
+                </table>
+                <div class="turn-page">
+                    <button id="prev-btn" class="btn">上一页</button>
+                    <button id="next-btn" class="btn">下一页</button>
+                </div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <h3>编辑表单</h3>
+                        <form id="student-edit-form">
+                            <div><label for="edit-name">姓名</label><input type="text" id="edit-name" name="name"></div>
+                            <div>
+                                <label>性别</label>
+                                <input type="radio" name="sex" value="0" id="edit-male" checked>
+                                <label for="edit-male" class="sex">男</label>
+                                <input type="radio" name="sex" value="1" id="edit-female" checked>
+                                <label for="edit-female" class="sex">女</label>
+                            </div>
+                            <div>
+                                <label for="edit-sNo">学号</label>
+                                <input type="text" id="edit-sNo" name="sNo" readonly="readonly">
+                            </div>
+                            <div><label for="edit-email">邮箱</label><input type="text" id="edit-email" name="email">
+                            </div>
+                            <div><label for="edit-birth">出生年</label><input type="text" id="edit-birth" name="birth">
+                            </div>
+                            <div><label for="edit-phone">手机号</label><input type="text" id="edit-phone" name="phone">
+                            </div>
+                            <div><label for="edit-address">住址</label><input type="text"
+                                                                            id="edit-address" name="address"></div>
+                            <div>
+                                <button class="btn" id="student-edit-btn">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 
+<script src="../js/common.js"></script>
 <script src="js/index.js"></script>
 
 <script>        <!--plan-->
 
 
-    /**
-     * 循环迭代项目: 实现学生管理系统
-     *
-     * 1.0: 使用 JS
-     * 2.0: 使用 JQ
-     * 3.0: 使用 H5+CSS3
-     * 4.0: 使用 Vue
-     */
+/**
+ * 循环迭代项目: 实现学生管理系统
+ *
+ * 1.0: 使用 JS
+ * 2.0: 使用 JQ
+ * 3.0: 使用 H5+CSS3
+ * 4.0: 使用 Vue
+ */
 
-    /**
-     * step.1 -- 框架
-     * step.2 -- 交互
-     */
+/**
+ * step.1 -- 框架
+ * step.2 -- 交互
+ */
 
 
 </script>
